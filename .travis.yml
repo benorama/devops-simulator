@@ -1,0 +1,23 @@
+language: groovy
+jdk: openjdk7
+notifications:
+  hipchat:
+    rooms:
+      secure: pojETP+goUHpZu+SgeCwFQzWZ8nxpMPXWNEzzoWmmjgnCojcXdB4P9GR3zSzTKJU0L5alkheOGuHGP24Fpildtm32vdK0tA/7bm7lK00VWdDxHU4N3PIzny9sJ0VMwu+U+gj3dXgWDUpQvBCWfWvUcfLE+TB4lC+jqtmk07MSto=
+env:
+  global:
+  - secure: Patqw1nK3N7UL9VHzgbq0mEPLPAa0ZipmSJml7BCIJjtel6p3PoL22MzFOPr3klBbhtM5D8bWZvAopg+h5iNXA5pvXdydlm1Nb10p2EahW5FLH5yq5s1r3MutXulWOewh6S33K8pZ9VbEx48vFcuNHLjnGVl6i7onks9W9f1zRU=
+  - secure: jiQPEXmrl0+Ta5feXsZYXYhZpPrFXsjqM/Er6r8H5h/W+8iMIuQuci7VBaBdE5ZtR21eCL+YDFtsMAB4DfFQNx6X7fEp4tzbKFZF/kooaDFwxWy86q9DsmI8Q3eIy31sUIGlJnOspkgWhXoaIJVlSoYmR8ajlz6xNFYjT/MIsDM=
+
+before_script:
+  - npm install -g bower
+  - bower install
+
+script:
+  - ./grailsw refresh-dependencies
+  #- ./grailsw test-app unit:
+  - ./grailsw asset-cdn-push -Dgrails.env=deployment --directory=gr8conf --gzip=true --access-key=$TRAVIS_ACCESS_KEY --secret-key=$TRAVIS_SECRET_KEY
+  - ./grailsw war
+
+after_success:
+  - ./grailsw aws-eb-deploy -Dgrails.env=production -DBEANSTALK_ACCESS_KEY=$TRAVIS_ACCESS_KEY -DBEANSTALK_SECRET_KEY=$TRAVIS_SECRET_KEY

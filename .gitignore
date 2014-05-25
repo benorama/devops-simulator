@@ -1,0 +1,30 @@
+# GRAILS files
+# /web-app/WEB-INF # Required for Travis Build
+/target
+/target-eclipse
+/plugin.xml
+
+# GRUNT files (Node modules dependencies)
+/node_modules
+
+# BOWER dependencies
+/grails-app/assets/dependencies
+
+# IDE files
+.classpath
+.idea/
+.project
+.settings
+/*.launch
+/*.tmproj
+
+*.log
+*.iml
+*.zip
+/out
+cobertura.ser
+*.sha1
+*.db
+dist
+.gradle/
+.DS_Store
