@@ -1,23 +1,11 @@
 language: groovy
 jdk: openjdk7
 
-env:
-  global:
-  - secure: "SbB1xJZjgC1+ngbe/gRX7PqTQG+wK7IsMahNXLJltr9cqHphyJXe+WAYawGTv2tG0/3FcxOOEWMvUqx8yolu90EpVOQ8njNPGbWmGL+bRwp6srPEsRvSEdqKqUrKeiRTus4DHobbdXj7Aek7ggwOqsQsf57cDSVdMDDvGJjBA0U="
-  - secure: "rzSYf025XCw/O4R3F3XPrFX3UyqWZFGHC/J11K/vH0ZlGRZMTWHelrH11SPUoCtU/M+fwQn2j4hhxt6omACPy8lkkHgh2cUSbRurr68+7IRkKpKs7FwioyltNCdRK/ZfUUXn++ZUJU2NjQNdGUA2lic01ZaciSq7Lo3xCfmfc5E="
-
-before_script:
-  - npm install -g bower
-  - bower install
-
 script:
   - ./grailsw refresh-dependencies
-  #- ./grailsw test-app unit:
-  - ./grailsw asset-cdn-push -Dgrails.env=deployment --directory=benorama --gzip=true --access-key=$TRAVIS_ACCESS_KEY --secret-key=$TRAVIS_SECRET_KEY
-  - ./grailsw war
+  - ./grailsw test-app -coverage -xml
 
 after_success:
-  - ./grailsw aws-eb-deploy -Dgrails.env=production -DBEANSTALK_ACCESS_KEY=$TRAVIS_ACCESS_KEY -DBEANSTALK_SECRET_KEY=$TRAVIS_SECRET_KEY
   - ./grailsw coveralls
 
 notifications:
