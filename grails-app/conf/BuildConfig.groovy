@@ -41,6 +41,10 @@ grails.project.dependency.resolution = {
     }
 
     dependencies {
+        // Latest HTTP Client/Mime for Coveralls plugin
+        build 'org.apache.httpcomponents:httpcore:4.3.2'
+        build 'org.apache.httpcomponents:httpclient:4.3.2'
+        build 'org.apache.httpcomponents:httpmime:4.3.3'
         // Latest Joda Time
         runtime 'joda-time:joda-time:2.3'
         // Latest MySQL Connector
@@ -74,5 +78,12 @@ grails.project.dependency.resolution = {
         compile ':raven:0.5.8' // Sentry
         runtime ':segmentio:0.4.3'
 
+        // Coveralls plugin
+        build(':coveralls:0.1', ':rest-client-builder:1.0.3') {
+            export = false
+        }
+        test(':code-coverage:1.2.7') {
+            export = false
+        }
     }
 }

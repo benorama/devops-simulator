@@ -18,6 +18,7 @@ script:
 
 after_success:
   - ./grailsw aws-eb-deploy -Dgrails.env=production -DBEANSTALK_ACCESS_KEY=$TRAVIS_ACCESS_KEY -DBEANSTALK_SECRET_KEY=$TRAVIS_SECRET_KEY
+  - ./grailsw coveralls
 
 notifications:
   hipchat:
