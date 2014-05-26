@@ -47,6 +47,9 @@ grails.project.dependency.resolution = {
         runtime 'mysql:mysql-connector-java:5.1.30'
         // Latest NewRelic API
         compile 'com.newrelic.agent.java:newrelic-api:3.6.0'
+        // Latest HTTP Client (required for Segment.io Plugin)
+        runtime 'org.apache.httpcomponents:httpcore:4.3.2'
+        runtime 'org.apache.httpcomponents:httpclient:4.3.2'
         // Spring Framework ORM
         compile "org.springframework:spring-orm:4.0.4.RELEASE"
     }
