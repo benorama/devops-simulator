@@ -6,7 +6,7 @@ import org.springframework.context.MessageSource
 class SimulatorService {
 
     static Random random = new Random()
-    static IMAGES_URL = 'https://s3-eu-west-1.amazonaws.com/devops-simulator'
+    static IMAGES_URL = 'http://cdn.benorama.com/assets/devops-simulator'
 
     MessageSource messageSource
     SegmentioService segmentioService
