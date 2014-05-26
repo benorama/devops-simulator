@@ -7,7 +7,7 @@ grails.project.fork = [
     //  compile: [maxMemory: 256, minMemory: 64, debug: false, maxPerm: 256, daemon:true],
 
     // configure settings for the test-app JVM, uses the daemon by default
-    test: [maxMemory: 768, minMemory: 64, debug: false, maxPerm: 256, daemon:true],
+    test: false,
     //test: false,
     // configure settings for the run-app JVM
     run: [maxMemory: 768, minMemory: 64, debug: false, maxPerm: 256, forkReserve:false],
@@ -56,6 +56,8 @@ grails.project.dependency.resolution = {
         runtime 'org.apache.httpcomponents:httpclient:4.3.2'
         // Spring Framework ORM
         compile "org.springframework:spring-orm:4.0.4.RELEASE"
+        // Required for Spock Mocks
+        test 'cglib:cglib-nodep:2.2'
     }
 
     plugins {
