@@ -22,4 +22,4 @@ script:
 notifications:
   hipchat:
     rooms:
-      "sa+Al0nzzNi+dxpcvwjBt+5dik7G+X2XcXt6BCCEuyYuRiCZEbKq+E/dwcf1tYvTSd6a+b5qRguDG0s3Cdx4AcZBFAmrs9KlELCoFeyOJ45a2ty5TH8s1yofwiWsnoyCiKnG1cppfyCvf5Ebq473k1NvPWxUl/RvQCGaHbuYfto="
+      - secure: "JiBNbD3lOb8i3Tmf7An2nBGiWSbVRw1Wk7mfNhILmI/1Zxov3QcjdRx53vXuknuOJZaFF73+iDv7xHMdoiax3jDpbN2FrB0Ncju2ROIIFriDe5haF9axIOYU2BHJQ8PD8UVzXHnKCzMxBleBHjLcoTkJGcKYbqcnmgcqOU77Yr4="
