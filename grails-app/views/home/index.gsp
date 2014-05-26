@@ -1,4 +1,4 @@
-<facebook:initJS appId="${facebookContext.app.id}"/>
+<facebook:initJS appId="${facebookContext.app.id}" version="v2.0"/>
 
 <g:render template="/navbar"/>
 

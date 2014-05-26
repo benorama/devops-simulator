@@ -14,10 +14,10 @@ script:
   - ./grailsw refresh-dependencies
   #- ./grailsw test-app unit:
   - ./grailsw asset-cdn-push -Dgrails.env=deployment --directory=devops-simulator --gzip=true --access-key=$TRAVIS_ACCESS_KEY --secret-key=$TRAVIS_SECRET_KEY
-  #- ./grailsw war
+  - ./grailsw war
 
 after_success:
-- ./grailsw aws-eb-deploy -Dgrails.env=production -DBEANSTALK_ACCESS_KEY=$TRAVIS_ACCESS_KEY -DBEANSTALK_SECRET_KEY=$TRAVIS_SECRET_KEY
+  - ./grailsw aws-eb-deploy -Dgrails.env=production -DBEANSTALK_ACCESS_KEY=$TRAVIS_ACCESS_KEY -DBEANSTALK_SECRET_KEY=$TRAVIS_SECRET_KEY
 
 notifications:
   hipchat:

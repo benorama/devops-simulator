@@ -58,7 +58,7 @@ grails.project.dependency.resolution = {
         runtime ':hibernate4:4.3.5.3' // or ":hibernate:3.6.10.15"
 
         // Facebook plugin for auth
-        runtime ':facebook-sdk:0.6.3'
+        runtime ':facebook-sdk:0.6.4'
 
         // Deployment plugins
         compile ':aws-elastic-beanstalk:0.3-SNAPSHOT'
