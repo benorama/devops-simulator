@@ -81,7 +81,7 @@ grails.project.dependency.resolution = {
         runtime ':segmentio:0.4.3'
 
         // Coveralls plugin
-        build(':coveralls:0.1', ':rest-client-builder:1.0.3') {
+        build(':coveralls:0.1.2', ':rest-client-builder:1.0.3') {
             export = false
         }
         test(':code-coverage:1.2.7') {
