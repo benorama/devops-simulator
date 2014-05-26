@@ -13,7 +13,7 @@ before_script:
 script:
   - ./grailsw refresh-dependencies
   #- ./grailsw test-app unit:
-  - ./grailsw asset-cdn-push -Dgrails.env=deployment --directory=devops-simulator --gzip=true --access-key=$TRAVIS_ACCESS_KEY --secret-key=$TRAVIS_SECRET_KEY
+  - ./grailsw asset-cdn-push -Dgrails.env=deployment --directory=benorama --gzip=true --access-key=$TRAVIS_ACCESS_KEY --secret-key=$TRAVIS_SECRET_KEY
   - ./grailsw war
 
 after_success:
