@@ -70,8 +70,8 @@ grails.project.dependency.resolution = {
         runtime ':facebook-sdk:0.6.4'
 
         // Deployment plugins
-        compile ':aws-elastic-beanstalk:0.3-SNAPSHOT'
-        compile ':cdn-asset-pipeline:0.3.5'
+        //compile ':aws-elastic-beanstalk:0.3-SNAPSHOT'
+        //compile ':cdn-asset-pipeline:0.3.5'
 
         // Monitoring
         compile(':newrelic:1.0-2.18.0') {
@@ -81,11 +81,11 @@ grails.project.dependency.resolution = {
         runtime ':segmentio:0.4.3'
 
         // Coveralls plugin
-        build(':coveralls:0.1.2', ':rest-client-builder:1.0.3') {
+        /*build(':coveralls:0.1.2', ':rest-client-builder:1.0.3') {
             export = false
         }
         test(':code-coverage:1.2.7') {
             export = false
-        }
+        }*/
     }
 }

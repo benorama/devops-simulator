@@ -190,7 +190,7 @@ grails {
 /**
  * Assets
  */
-def cdnStoragePath = "assets/${appName}-${appVersion}/"
+/*def cdnStoragePath = "assets/${appName}-${appVersion}/"
 environments {
     deployment {
         // Env only used for asset-cdn-push (with a bucket env parameter)
@@ -212,12 +212,12 @@ environments {
     production  {
         grails.assets.url = "${System.getProperty('ASSETS_URL')}/${cdnStoragePath}"
     }
-}
+}*/
 
 /**
  * AWS Beanstalk (only used by Travis for deployment)
  */
-grails {
+/*grails {
     plugin {
         awsElasticBeanstalk {
             serviceEndpointUrl = 'https://elasticbeanstalk.eu-west-1.amazonaws.com'
@@ -238,4 +238,4 @@ environments {
             }
         }
     }
-}
+}*/
