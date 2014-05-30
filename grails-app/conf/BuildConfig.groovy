@@ -63,7 +63,7 @@ grails.project.dependency.resolution = {
     plugins {
         // Core plugins
         build ':tomcat:7.0.53'
-        compile ':asset-pipeline:1.8.7'
+        compile ':asset-pipeline:1.8.8'
         runtime ':hibernate4:4.3.5.3' // or ":hibernate:3.6.10.15"
 
         // Facebook plugin for auth
