@@ -11,7 +11,7 @@ class SimulatorService {
     MessageSource messageSource
     SegmentioService segmentioService
 
-    Map deployApp(Account account, Pipeline pipeline) {
+    Map deployApp(Account account, Pipeline pipeline, Integer id = null) {
         boolean success = false
         switch (pipeline) {
             case Pipeline.AUTO:
@@ -23,7 +23,7 @@ class SimulatorService {
                 break
         }
         Map deployment = [:]
-        int randomId = random.nextInt(6)
+        int randomId = id ?: random.nextInt(6)
         if (success) {
             // Randomly get a success image
             deployment['image'] = "${IMAGES_URL}/deployment/success-${randomId}.gif"
@@ -42,9 +42,9 @@ class SimulatorService {
         deployment
     }
 
-    Map sendMessage(Account account, Pipeline pipeline) {
+    Map sendMessage(Account account, Pipeline pipeline, Integer id = null) {
         Map reply = [:]
-        int randomId = random.nextInt(6)
+        int randomId = id ?: random.nextInt(6)
         switch (pipeline) {
             case Pipeline.AUTO:
                 // Randomly get a yes image
