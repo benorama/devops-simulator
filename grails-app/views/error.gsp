@@ -9,10 +9,8 @@
                 Error
             </g:else>
         </title>
-		<g:if env="development">
-            <asset:stylesheet href="error.css"/>
-        </g:if>
-	</head>
+		<asset:stylesheet href="error.css"/>
+    </head>
 	<body>
         <div class="container">
             <g:if env="development">
