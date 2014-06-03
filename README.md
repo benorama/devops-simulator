@@ -1,7 +1,7 @@
 DevOps Simulator Grails Demo
 ============================
 
-This is the demo app for [Gr8Conf Europe 2014](http://http://gr8conf.eu) presentation [Running a Lean Startup - Devops & Grails & AWS](https://speakerdeck.com/benorama/running-a-lean-startup-devops-and-grails-and-aws).
+This is the demo app for [Gr8Conf Europe 2014](http://gr8conf.eu) presentation [Running a Lean Startup - Devops & Grails & AWS](https://speakerdeck.com/benorama/running-a-lean-startup-devops-and-grails-and-aws).
 
 RUNNING THE APP LOCALLY
 
@@ -10,4 +10,4 @@ RUNNING THE APP LOCALLY
 - In Config.groovy, copy Facebook App ID and secret key
 - Run `bower install` to get static assets dependencies
 - Run `grunt less` to generate CSS files
-- Run `grails run-app
+- Run `grails run-app`
