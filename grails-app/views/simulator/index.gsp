@@ -24,7 +24,7 @@
                     </h2>
                     <image src="${reply['image']}" style="width: 100%"/>
                     <hr/>
-                    <form method="post" role="form">
+                    <form id="messageForm" method="post" role="form">
                         <input type="hidden" name="message" value="${params.message}"/>
                         <button type="submit" class="btn btn-default">
                             <i class="fa fa-send"></i>
@@ -48,7 +48,7 @@
                                     <h4 class="media-heading">
                                         ${account.fullName}
                                     </h4>
-                                    <form method="post" role="form">
+                                    <form id="deployForm" method="post" role="form">
                                         <div class="form-group">
                                             <textarea class="form-control" name="message" rows="3">Can we deploy to production?</textarea>
                                         </div>
@@ -101,67 +101,3 @@
     </div>
     <g:render template="/footer"/>
 </div>
-
-
-<!-- Main jumbotron for a primary marketing message or call to action
-<div class="container">
-    <div class="row">
-        <div class="col-md-3">
-
-            <ul class="nav nav-pills nav-stacked">
-                <li class="${params.step == 1 ? 'active' : ''}">
-                    <a href="">
-                        Step 1 - Release
-                    </a>
-                </li>
-                <li class="${params.step == 2 ? 'active' : params.step == 1 ? 'disabled' : ''}">
-                    <a href="">
-                        Step 2 - Deploy
-                    </a>
-                </li>
-                <li class="${params.step == 3 ? 'active' : 'disabled'}">
-                    <a href="">
-                        Step 3 - ...
-                    </a>
-                </li>
-            </ul>
-        </div>
-        <div class="col-md-9">
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    DevOps level
-                </div>
-                <div class="panel-body">
-                    <form class="form">
-                        <fieldset>
-                            <%-- <legend>Choose your DevOps level</legend> --%>
-                            <div class="form-group">
-                                <label class="control-label">
-                                    Choose your DevOps level
-                                </label>
-                                <div>
-                                    <input type="radio" name="level" id="level0"> None<br/>
-                                    <input type="radio" name="level" id="level1"> Agile Development<br/>
-                                    <input type="radio" name="level" id="level2"> Continous Integration<br/>
-                                    <input type="radio" name="level" id="level3"> Continuous Delivery<br/>
-                                    <input type="radio" name="level" id="level4"> DevOps<br/>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <button type="submit" class="btn btn-primary">Release</button>
-                            </div>
-                        </fieldset>
-                        <input type="hidden" name="step" value="2"/>
-                    </form>
-                </div>
-                <div class="panel-footer">
-
-                </div>
-            </div>
-        </div>
-    </div>
-    <hr/>
-    <footer>
-        <p>&copy; <a href="">Company</a> 2014</p>
-    </footer>
-</div> -->
