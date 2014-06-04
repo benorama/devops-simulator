@@ -232,8 +232,8 @@ environments {
         grails {
             plugin {
                 awsElasticBeanstalk {
-                    environmentName = "gr8conf-${appVersion.replaceAll('\\.' ,'-')}"
-                    savedConfigurationName = 'gr8conf'
+                    environmentName = "devops-simulator-${appVersion.replaceAll('\\.' ,'-')}"
+                    savedConfigurationName = 'devops-simulator'
                 }
             }
         }

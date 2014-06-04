@@ -7,7 +7,7 @@
             <g:if test="${account}">
                 <ul class="nav navbar-nav">
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Choose your build pipeline <b class="caret"></b></a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Choose your delivery pipeline <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                             <li>
                                 <g:link params="[pipeline: 'manual']">
@@ -29,6 +29,12 @@
                 </ul>
             </g:if>
             <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="https://speakerdeck.com/benorama/running-a-lean-startup-devops-and-grails-and-aws" target="_blank">
+                        <i class="fa fa-caret-square-o-right "></i>
+                        See on SpeakerDeck
+                    </a>
+                </li>
                 <li>
                     <a href="https://github.com/benorama/devops-simulator" target="_blank">
                         <i class="fa fa-github-square"></i>
@@ -63,6 +69,5 @@
             </ul>
 
         </div>
-        <!--/.navbar-collapse -->
     </div>
 </div>
